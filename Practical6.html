@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical-6</title>
+    <style>
+        body{
+            background-color: rgb(170, 169, 169);
+        }
+        #container{
+            display: inline-flex;
+        }
+        .box{
+            border:2px solid rgb(201, 167, 167);
+            border-radius: 10px;
+            color: white;
+            margin: 10px;
+            width: 300px;
+            height:350px;
+            padding: 10px;
+            background-color: rgb(248, 249, 250);
+            overflow: hidden;
+        }
+        img{
+            border-radius: 10px;
+            width: 90%;
+        }
+        p,h2{
+            color: rgb(8, 8, 8);
+        }
+        .readMore a{
+            display: flex;
+            border-radius: 10px;
+
+            justify-content: center;
+            text-decoration: none;
+            padding :10px;
+            margin :10px;
+            color: rgb(253, 253, 255);    
+            background-color: rgb(214, 46, 16);
+        }
+        a:hover{
+            background-color: rgb(76, 76, 160);
+        }
+        .center{
+            display:flex;
+            justify-content: center;;
+            align-items: center;
+        }   
+    </style>
+</head>
+<body>
+    <h2 class="center">PRACTICAL- 6: CREATE FOLLOWING LAYOUT USING CSS LAYOUT PROPERTIES</h2>
+    <div id="container">
+        <div class="box">
+            <div class="center">                
+                <img src="./assets/html.png" height="140px" class="center">
+            </div>
+            <h2 class="center">Introduction to HTML</h2>          
+            <p class="center">               
+                HTML stands for Hypertext Markup Language, and it is the most widely used
+      language to write Web Pages. Hypertext refers to the way in which Web
+      pages are linked together
+                <div class="readMore">
+                    <a href="IntrotoHTML.html" target="_blank" >Read More</a>
+                </div>
+            </p>
+        </div>
+        <div class="box">
+            <div class="center">               
+                <img src="./assets/css.png" height="140px" alt="" class="center">
+            </div>
+            <h2 class="center">Introduction to CSS</h2>
+            <p class="center">
+                CSS is short for Cascading Style Sheets, and is the preferred way for
+                setting the look and feel of a website. Cascading Style Sheets (CSS) is a
+                markup language responsible for how your web pages will look like
+            </p>
+            <div class="readMore">
+                <a href="IntrotoCSS.html" target="_blank" >Read More</a>
+            </div>
+        </div>
+        <div class="box">
+            <div class="center">               
+                <img src="./assets/js.png" height="140px" alt="" class="center">
+            </div>
+            <h2 class="center">Introduction to JavaScript</h2>            
+            <p class="center">
+                JavaScript is also known as the Programming Language of web as it is the
+      only programming language for Web browsers. It is an object-based
+      scripting language which is lightweight and cross-platform
+            </p>
+            <div class="readMore">
+                <a href="IntrotoJS.html" target="_blank" >Read More</a>
+            </div>
+        </div>
+            <div class="box">
+                <div class="center">         
+                    <img src="./assets/bootstrap.png" height="140px" alt="" class="center">
+                </div>
+                <h2 class="center">Introduction to Bootstrap</h2>                         
+                    <p class="center">
+                                    Bootstrap is an HTML, CSS, and JavaScript Framework,it is useful to
+                                    develop responsive websites without rewriting the code for each device or
+                                    screen. It has not only HTML/CSS components but also JS components
+                    </p>
+                    <div class="readMore">
+                        <a href="IntrotoBootstrap.html" target="_blank" >Read More</a>
+                    </div>
+                </div>                   
+        </div>
+</body>
+</html>
