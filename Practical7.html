@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical-7</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        .header{
+            height:50px;
+            background-color: grey;
+            text-align: center;
+            margin: 10px;
+            line-height: 50px;
+            color: white;
+        }
+        .content{
+            height: 1760px;
+        }
+        .banner{
+            background-color: skyblue;
+            height: 400px;
+            color: white;
+            text-align: center;
+            line-height: 400px;
+            margin: 10px;
+        }
+        .section1{
+            height: 300px;
+            padding: 10;
+            margin: 10px;
+            text-align: center;
+            
+        }
+        .circle{
+            display: inline-block;
+            border-radius: 100%;
+            height: 200px;
+            background-color: goldenrod;
+            margin: 10px 60px;
+            width: 200px;
+        }
+        .section2{
+            text-align: center;
+            height:600px;
+            margin: 10px;
+        }
+        .left{
+            background-color: rgb(56, 55, 54);
+            margin: 10px;
+            height: 80%;
+            width: 600px;
+            float: left;
+                }
+        .box{
+            display: inline-block;
+            height: 148px;
+            width: 50%;
+            background-color: rgb(235, 87, 18);
+            margin: 10px;
+            float: right;
+        }
+        .section3{
+            margin: 10px;
+            height: 400px;
+        }
+        .footer{
+            height: 70px;
+            background-color: rgb(207, 63, 147);
+            margin: 10px;
+            line-height: 70px;
+            color: white;
+        }
+        h1{
+            text-align: center;
+        }
+        .square{
+            display: inline-block;
+            height: 300px;
+            background-color: red;
+            margin: 26px 40px 0px 39px;
+            width: 250px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>
+                Header
+            </h1>
+        </div>
+        <div class="content">
+            <div class="banner">
+                <h1>Banner</h1>
+            </div>
+            <div class="section1">
+                <h1>Section-1</h1>
+                <div class="circle" id="block1"></div>
+                <div class="circle" id="block2"></div>
+                <div class="circle" id="block3"></div>
+                <div class="circle" id="block4"></div>
+            </div>
+            <div class="section2">
+                <h1>Section-2</h1>
+                <div class="left">
+                  <h1 style="line-height: 500px; color: white;">Main Content</h1>
+                </div>
+                <div class="box" id="box1"><h1 style="color: white; line-height: 148px;">Artical-1</h1></div>
+                <div class="box" id="box2"><h1 style="color: white; line-height: 148px;">Artical-2</h1></div>
+                <div class="box" id="box3"><h1 style="color: white; line-height: 148px;">Artical-3</h1></div>
+            </div>
+            <div class="section3">
+                <h1>Section-3</h1>
+                <div class="square" id="square1"></div>
+                <div class="square" id="square2"></div>
+                <div class="square" id="square3"></div>
+                <div class="square" id="square4"></div>
+            </div>
+        </div>
+        <h1 style="text-align: center;">Section-4</h1>
+        <div class="footer">
+            <h1>Footer</h1>
+        </div>
+    </div>
+</body>
+</html>
