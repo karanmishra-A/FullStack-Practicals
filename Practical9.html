@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practical-9</title>
+    <script src="https://kit.fontawesome.com/8e517d223f.js" crossorigin="anonymous"></script>
+    <style>
+      * {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.header {
+  width: 100%;
+  height: 70px;
+  background-color: grey;
+  padding: 0px 20px;
+}
+.header .menu {
+  list-style: none;
+  float: right;
+}
+.menu li {
+  display: inline-block;
+  line-height: 70px;
+}
+.menu li a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  text-transform: uppercase;
+  padding: 0px 20px;
+  transition: 0.4s;
+}
+.menu li a:hover,
+.show-btn:hover,
+.hide-btn:hover {
+  color: goldenrod;
+}
+.show-btn,
+.hide-btn {
+  font-size: 30px;
+  color: white;
+  line-height: 70px;
+  display: none;
+}
+.show-btn {
+  float: right;
+}
+#chk {
+  position: absolute;
+  visibility: hidden;
+  z-index: -10;
+}
+
+.content {
+  width: 100%;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  padding-top: 100px;
+}
+
+.Banner {
+  width: 100%;
+  height: 550px;
+  background-repeat: no-repeat;
+  background-image: url("./assets/pic1.jpg");
+  background-size: 100%;
+}
+
+.sec1 {
+  width: 100%;
+  height: 200px;
+  /* margin-top: 20px; */
+}
+.circle1 {
+  display: inline-block;
+  width: 311px;
+  height: 69%;
+  margin: 10px 2px 5px 0px;
+  /* border-radius: 100%; */
+  /* margin: 27px 49px; */
+}
+#c1 {
+  background-image: url("./assets/logo1.png");
+  background-size: 145px;
+  background-repeat: no-repeat;
+}
+
+#c2 {
+  background-image: url("./assets/logo2.png");
+  background-size: 135px;
+  background-repeat: no-repeat;
+}
+
+#c3 {
+  background-image: url("./assets/logo3.png");
+  background-size: 143px;
+  background-repeat: no-repeat;
+}
+
+#c4 {
+  background-image: url("./assets/logo4.png");
+  background-size: 143px;
+  background-repeat: no-repeat;
+}
+
+.left {
+  width: 650px;
+  height: 477px;
+  background-color: goldenrod;
+  float: left;
+  padding: 12px;
+}
+
+.sec2::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.article1 {
+  width: 621px;
+  height: 151px;
+  background-color: purple;
+  margin-bottom: 10px;
+  float: right;
+  background-size: 100%;
+}
+#project1 {
+  background-image: url("./assets/project1.png");
+}
+#project2 {
+  background-image: url("./assets/project2.png");
+}
+#project3 {
+  background-image: url("./assets/project3.png");
+}
+
+.square1 {
+  display: inline-block;
+  width: 270px;
+  height: 390px;
+  overflow: hidden;
+  margin-right: 60px;
+  text-align: justify;
+  padding: 30px;
+  margin: 59px 9px 0px 1px;
+  background-color: rgb(197, 192, 192);
+}
+.square1 img {
+  width: 100%;
+  height: 150px;
+  border-radius: 20px;
+}
+#box1 {
+  margin-left: 100px;
+}
+.box h3 {
+  text-align: center;
+  margin: 10px;
+}
+
+.mybutton {
+  display: block;
+  margin-top: 10px;
+  text-decoration: none;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: red;
+  padding: 10px 20px;
+  border-radius: 20px;
+}
+
+.mybutton:hover {
+  background-color: blue;
+}
+
+.footer {
+  width: 100%;
+  height: 70px;
+  margin-top: auto;
+  background-color: rgb(247, 134, 134);
+}
+
+@media (max-width: 900px) {
+  .show-btn,
+  .hide-btn {
+    display: block;
+  }
+  .menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 500px;
+    background-color: black;
+    text-align: center;
+    padding: 80px 0px;
+    transition: 0.7s;
+    line-height: normal;
+  }
+  .sec1 {
+    width: 100%;
+    text-align: center;
+    line-height: normal;
+  }
+
+  #chk:checked ~ .menu {
+    right: 0;
+  }
+  .menu li {
+    display: block;
+  }
+  .menu li a {
+    display: block;
+  }
+  .hide-btn {
+    position: absolute;
+    right: 20px;
+    color: white;
+    top: 10px;
+  }
+}
+
+    </style>
+  </head>
+  <body>
+    <a id="top"></a>
+    <div class="header">
+      <input type="checkbox" id="chk" />
+      <label for="chk" class="show-btn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <ul class="menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Team</a></li>
+        <li><a href="#">Technologies</a></li>
+        <li><a href="#">Contact</a></li>
+        <label for="chk" class="hide-btn">
+          <i class="fas fa-times"></i>
+        </label>
+      </ul>
+      <div class="content">
+        <div class="Banner">
+          <h1 style="padding: 10px">PRACTICAL-9</h1>
+        </div>
+        <h1 id="team" style="text-align: center; padding: 10px">
+          Team Members
+        </h1>
+        <div class="sec1">
+          <div class="circle1" id="c1"></div>
+          <div class="circle1" id="c2"></div>
+          <div class="circle1" id="c3"></div>
+          <div class="circle1" id="c4"></div>
+        </div>
+
+        <h1 id="about" style="text-align: center; padding: 10px">About Us</h1>
+        <div class="sec2">
+          <div class="left">
+            <h2 style="padding-top: 5px">About Project</h2>
+            <p style="padding-top: 10px">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quia
+              eos atque. Vel quidem quo, eligendi quae alias rerum error placeat
+              quam, ipsa molestiae atque, aliquid pariatur? Nemo hic
+              voluptatibus laudantium porro incidunt corrupti recusandae esse
+              numquam minus maxime repellendus dolores, explicabo adipisci
+              perferendis quidem minima magnam. Aliquid incidunt, sapiente
+              voluptatibus harum reiciendis adipisci ea, distinctio ab rerum
+              quidem id minus officiis! Reiciendis dolor quampedit. Nostrum,
+              saepe. Necessitatibus facere nisi alias odit error perferendis.
+              maiores exercitationem optio aperiam explicabo iure, praesentium
+              asperiores aliquam. Tempora facilis accusantium quasi odio
+              voluptatibus. Lorem ipsum dolor sit amet consectetur adipisicing
+              elit. Autem, laudantium quia nam consequatur, quidem eos enim
+              aspernatur quis adipisci accusamus explicabo consequuntur quisquam
+              dicta ipsum molestias voluptas, earum corrupti id. Commodi ab vero
+              deleniti voluptatem veritatis aut explicabo autem id expedita eos
+              odio voluptates nobis eveniet consequatur sed, quia nam quas et
+              quisquam libero eum illum cupiditate asperiores. Natus, sed
+              corporis quos similique consectetur eligendi, cum dicta nam
+              architecto, explicabo impedit enim voluptatum voluptatem
+              blanditiis ea ex! Nihil similique impedit sunt! Aliquam minus
+              libero mollitia tempora totam, dolorum dolore in quis dolor facere
+              eum eius earum reprehenderit sed et expedita. Lorem ipsum dolor
+              sit, amet consectetur adipisicing elit. Molestias praesentium
+              veritatis aut molestiae, numquam impedit dolore! Fuga iusto
+              tempora at repudiandae debitis harum, error neque ipsum quam dicta
+              nesciunt dignissimos perferendis? Aut, modi mollitia. Voluptatibus
+              magnam exercitationem corporis itaque. Dolorum officiis quae nulla
+              tempore, illum hic assumenda nihil distinctio optio blanditiis
+              asperiores perspiciatis corrupti inventore ducimus.
+            </p>
+          </div>
+          <div class="right">
+            <div class="article1" id="project1">
+              <h1 style="text-align: center">Project-1</h1>
+            </div>
+            <div class="article1" id="project2">
+              <h1 style="text-align: center">Project-2</h1>
+            </div>
+            <div class="article1" id="project3">
+              <h1 style="text-align: center">Project-3</h1>
+            </div>
+          </div>
+        </div>
+
+        <h1 id="tc" style="text-align: center; padding-top: 15px">
+          Technologies Used
+        </h1>
+        <div class="sec3">
+          <div class="square1" id="box1">
+            <div class="image-heading">
+              <img src="./assets/html.png" alt="" />
+            </div>
+            <h3>Introduction to HTML</h3>
+            <p>
+              HTML stands for Hypertext Markup Language, and it is the most
+              widely used language to write Web Pages. Hypertext refers to the
+              way in which Web pages are linked together.
+            </p>
+            <div class="image" style="text-align: center">
+              <a href="./IntrotoHTML.html" class="mybutton" target="_blank"
+                >Read More</a
+              >
+            </div>
+          </div>
+          <div class="square1" id="box2">
+            <div class="image-heading">
+              <img src="./assets/css.png" alt="" />
+            </div>
+            <h3>Introduction to CSS</h3>
+            <p>
+              CSS is short for Cascading Style Sheets, and is the preferred way
+              for setting the look and feel of a website.CSS is used for decorating the page in an efficient manner
+            </p>
+            <div class="image" style="text-align: center">
+              <a href="./IntrotoCSS.html" class="mybutton" target="_blank"
+                >Read More</a
+              >
+            </div>
+          </div>
+          <div class="square1" id="box3">
+            <div class="image-heading">
+              <img src="./assets/js.png" alt="" />
+            </div>
+            <h3>Introduction to JS</h3>
+            <p>
+              JavaScript is also known as the Programming Language of web as it
+              is the only programming language for Web browsers. It is an
+              object-based scripting language which is lightweight
+            </p>
+            <div class="image" style="text-align: center">
+              <a href="./IntrotoJS.html" class="mybutton" target="_blank"
+                >Read More</a
+              >
+            </div>
+          </div>
+          <div class="square1" id="box4">
+            <div class="image-heading">
+              <img src="./assets/bootstrap.png" alt="" />
+            </div>
+            <h3>Introduction to Bootstrap</h3>
+            <p>
+              Bootstrap is an HTML, CSS, and JavaScript Framework,it is useful
+              to develop responsive websites without rewriting the code for each
+              device or screen. Click on read more
+            </p>
+            <div class="image" style="text-align: center">
+              <a href="./IntrotoBootstrap.html" class="mybutton" target="_blank"
+                >Read More</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <h1
+        id="contact"
+        style="text-align: center; padding: 10px; padding-top: 100px"
+      >
+        Contact
+      </h1>
+      <div class="footer">
+        <p style="text-align: center; padding-top: 5px">
+          Linkedin :-
+          <a href="https://www.linkedin.com/in/karan-mishra-75327a1b2/" target="_blank">Click to contact</a>
+        </p>
+        <p style="text-align: center; padding-top: 20px">
+          <a href="#top">Back to Top</a>
+        </p>
+      </div>
+    </div>
+    </div>
+  </body>
+</html>
