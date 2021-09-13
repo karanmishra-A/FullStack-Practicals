@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practical-10</title>
+    <script src="https://kit.fontawesome.com/8e517d223f.js" crossorigin="anonymous"></script>
+    <style>
+      * {
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .header {
+        width: 100%;
+        height: 70px;
+        position: fixed;
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .header img {
+        height: 70px;
+        width: 70px;
+        margin-right: 20px;
+      }
+      .header h1 {
+        line-height: 70px;
+        color: white;
+      }
+      .content {
+        width: 100%;
+        margin-top: 30px;
+        float: right;
+        transition: 0.7s;
+      }
+      .content img {
+        width: 100%;
+        max-width: 700px;
+        display: block;
+        margin: auto;
+        margin-bottom: 20px;
+      }
+      .content p {
+        text-align: justify;
+      }
+      .sidebar {
+        width: 20%;
+        height: 100vh;
+        background-color: black;
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        transition: 0.7s;
+      }
+      .sidebar ul {
+        list-style: none;
+      }
+      .sidebar ul li {
+        border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+      }
+      .sidebar ul li a {
+        display: block;
+        text-decoration: none;
+        color: white;
+        font-size: 20px;
+        padding: 15px 25px;
+        font-family: Arial, Helvetica, sans-serif;
+        transition: 0.4s;
+      }
+      a i {
+        margin-right: 15px;
+      }
+      .sidebar ul li a:hover {
+        border-left: 8px solid white;
+      }
+      .social {
+        margin-top: 180px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        font-size: 30px;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+        border-top: 2px solid rgba(255, 255, 255, 0.5);
+        padding: 15px 25px;
+      }
+      i {
+        font-size: 30px;
+        color: white;
+        margin-left: 20px;
+      }
+      .show-btn,
+      .hide-btn {
+        font-size: 35px;
+        color: white;
+        position: fixed;
+        top: 20px;
+        left: 50px;
+      }
+      .hide-btn {
+        opacity: 0;
+      }
+      #chk:checked ~ .sidebar {
+        left: 0;
+      }
+      #chk:checked ~ .show-btn {
+        opacity: 0;
+      }
+      #chk:checked ~ .hide-btn {
+        opacity: 1;
+      }
+      #chk:checked ~ .content {
+        width: 80%;
+      }
+      @media (max-width:768px) {
+        .sidebar {
+          width: 100%;
+          text-align: center;
+        }
+        .header h1 {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <img src="./assets/logo5.png" alt="" />
+      <h1>FullStack</h1>
+    </div>
+    <input type="checkbox" name="" id="chk" />
+    <label for="chk" class="show-btn">
+      <i class="fa fa-bars"></i>
+    </label>
+    <label for="chk" class="hide-btn">
+      <i class="fa fa-times"></i>
+    </label>
+    <div class="sidebar">
+      <ul>
+        <li>
+          <a href="#"><i class="fa fa-home"></i><span>Home</span></a>
+        </li>
+        <li>
+          <a href="#"><i class="fa fa-user"></i><span>About</span></a>
+        </li>
+        <li>
+          <a href="#"><i class="fa fa-tasks"></i><span>Services</span></a>
+        </li>
+        <li>
+          <a href="#"><i class="fa fa-rss"></i><span>Blog</span></a>
+        </li>
+        <li>
+          <a href="#"><i class="fa fa-id-card"></i><span>Contact us</span></a>
+        </li>
+      </ul>
+      <div class="social">
+        <a href="https://www.facebook.com/karan.mishra.928" target="_blank"><i class="fa fa-facebook-square"></i></a>
+        <a href="https://www.linkedin.com/in/karan-mishra-75327a1b2/" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+        <a href="https://www.instagram.com/_mishra.karan_/" target="_blank"><i class="fa fa-instagram"></i></a>
+      </div>
+    </div>
+    <div class="content">
+      <img src="./assets/pic1.jpg" alt="" />
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea ratione
+        odio dicta, ipsam facilis vitae fuga mollitia nemo molestias voluptatem
+        consectetur reiciendis quas nam, odit aliquam aut dignissimos officia
+        ipsum. Mollitia facilis sint exercitationem rerum non soluta, iste
+        fugiat eum veritatis blanditiis. Illo non possimus, est voluptates
+        nesciunt quisquam dolores! Inventore quasi quos molestias libero, ipsam
+        rem quas qui itaque repudiandae quisquam tempore nesciunt illum ab,
+        deleniti unde numquam id laboriosam. Consequuntur quaerat fuga eligendi
+        sed autem cumque placeat doloremque adipisci amet. Quasi, quaerat
+        molestiae, molestias vitae ex fugit architecto ut fugiat eveniet
+        eligendi dolor quo dignissimos velit? Unde laborum quod velit dolore
+        quia in provident consequatur, laboriosam tempore mollitia impedit,
+        nobis libero non placeat quos. Natus sunt officia enim expedita ipsum
+        vel corporis ab consequatur odio possimus, soluta ea totam accusantium
+        itaque vero laudantium error deleniti eaque molestiae? Commodi quam,
+        rerum eos ad ex deserunt facere iusto autem dolorum consectetur sint
+        dolores eum praesentium in odio eligendi itaque. Modi esse cumque
+        cupiditate perspiciatis id repellendus labore optio tenetur impedit,
+        dicta vitae doloribus soluta, non aliquid consequuntur illum eos sint
+        doloremque! Cupiditate omnis, voluptates totam culpa illum soluta
+        incidunt necessitatibus temporibus nulla, mollitia nihil, officia ipsum
+        beatae dolorem. Nostrum aliquid totam ipsum ea explicabo provident
+        praesentium molestiae ut sint voluptatem a distinctio eligendi inventore
+        vero exercitationem quia hic aut, beatae suscipit dolorum. Ea, a.
+        Placeat, eaque quas et excepturi aliquam perferendis! Perferendis eum
+        eius vitae quam odit! Deserunt incidunt velit provident quaerat est
+        placeat voluptatibus minima ipsam natus architecto, culpa excepturi, vel
+        optio temporibus itaque quam illo quisquam reiciendis error obcaecati!
+        Aperiam pariatur incidunt inventore officia facilis aliquam, quis,
+        necessitatibus minima dicta voluptates impedit repellat nam! Quis
+        eveniet laboriosam placeat cupiditate ratione explicabo pariatur
+        voluptatum inventore maiores repellendus dicta nemo nobis, natus quaerat
+        fuga non tempora aliquam incidunt, consequuntur dolores!
+      </p>
+    </div>
+  </body>
+</html>
