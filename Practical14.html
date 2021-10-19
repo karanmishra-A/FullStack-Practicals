@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practical-14</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      button {
+        background-color: yellow;
+        text-align: center;
+        margin: 20px;
+        height: 50px;
+        width: 50px;
+      }
+    </style>
+  </head>
+  <body style="background-color: grey">
+    <h1 style="text-align: center; font-size: 3rem">Counter</h1>
+    <div class="container">
+      <button id="minus"><b>-</b></button>
+      <h1 id="counter" style="color: yellow">0</h1>
+      <button id="plus"><b>+</b></button>
+    </div>
+    <script>
+      var minus = document.getElementById("minus");
+      var counter = document.getElementById("counter");
+      var plus = document.getElementById("plus");
+      var count = 0;
+      updateDisplay();
+
+      plus.addEventListener("click", () => {
+        count++;
+        updateDisplay();
+      });
+
+      minus.addEventListener("click", () => {
+        if(count <= 0){
+            minus.disable = true;
+        }
+        else{
+            count--;
+            minus.disable = false;
+        }
+        updateDisplay();
+      });
+
+      function updateDisplay() {
+        counter.innerHTML = count;
+      }
+    </script>
+  </body>
+</html>
